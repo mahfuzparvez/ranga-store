@@ -17,10 +17,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 
-<body>
+<body id="body">
   <header></header>
   <main class="main">
-    <div class="search-field">
+    <div id="search-field">
       <div class="search-box">
         <input id="input-field" class="search-field" type="text" />
         <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
@@ -32,7 +32,6 @@
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="">
-          <h1></h1>
         </div>
       </div>
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
@@ -50,31 +49,33 @@
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
-                <td><span id="total-Products"> 0</span></td>
+                <td>
+                  <span id="total-Products" class="right-card-font"> 0</span>
+                </td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <th>Price:</th>
-                <td>$ <span id="price">0</span></td>
+                <td>$ <span id="price" class="right-card-font">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <th>Delivery-Charge:</th>
-                <td>$ <span id="delivery-charge">20</span></td>
+                <td>$ <span id="delivery-charge" class="right-card-font">20</span></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <th>Total-Tax:</th>
-                <td>$ <span id="total-tax">0</span></td>
+                <td>$ <span id="total-tax" class="right-card-font">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <th scope="row">Total</th>
-                <td colspan="2">$ <span id="total">0</span></td>
+                <td colspan="2">$ <span id="total" class="right-card-font">0</span></td>
                 <td></td>
               </tr>
             </tbody>

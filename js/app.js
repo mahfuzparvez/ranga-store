@@ -3,8 +3,6 @@ const loadProducts = () => {
   showProducts(data);
 };
 
-
-
 // show all product in UI 
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
@@ -49,6 +47,7 @@ const updatePrice = (id, value) => {
   const total = convertedOldPrice + convertPrice;
   document.getElementById(id).innerText = Math.round(total);
 };
+
 
 // set innerText function
 const setInnerText = (id, value) => {
