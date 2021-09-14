@@ -1,44 +1,562 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FakeStore</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
   <!-- google Montserrat  font  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&amp;display=swap" rel="stylesheet">
 </head>
 
-<body id="body">
+<body data-new-gr-c-s-check-loaded="14.1028.0" data-gr-ext-installed="">
   <header></header>
   <main class="main">
-    <div id="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="search-field">
+            <div class="form-group text-center">
+              <input type="text" class="form-control d-inline w-75" id="formGroupExampleInput"
+                placeholder="Search Your Product">
+              <button type="button" class="btn btn-info" data-toggle="button" aria-pressed="false" autocomplete="off"
+                id="search-btn" onclick="loadProducts()">
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+        </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="">
+          <!-- <h1></h1> -->
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h4>
+                <p>Category: men's clothing</p>
+                <h2>Price: $ 109.95</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 3.9</p>
+                <p>Total Rating = 120</p>
+                <button onclick="addToCart(1,109.95)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Mens Casual Premium Slim Fit T-Shirts </h4>
+                <p>Category: men's clothing</p>
+                <h2>Price: $ 22.3</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 4.1</p>
+                <p>Total Rating = 259</p>
+                <button onclick="addToCart(2,22.3)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Mens Cotton Jacket</h4>
+                <p>Category: men's clothing</p>
+                <h2>Price: $ 55.99</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 4.7</p>
+                <p>Total Rating = 500</p>
+                <button onclick="addToCart(3,55.99)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Mens Casual Slim Fit</h4>
+                <p>Category: men's clothing</p>
+                <h2>Price: $ 15.99</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 2.1</p>
+                <p>Total Rating = 430</p>
+                <button onclick="addToCart(4,15.99)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">John Hardy Women's Legends Naga Gold &amp; Silver Dragon Station
+                  Chain Bracelet</h4>
+                <p>Category: jewelery</p>
+                <h2>Price: $ 695</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 4.6</p>
+                <p>Total Rating = 400</p>
+                <button onclick="addToCart(5,695)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Solid Gold Petite Micropave </h4>
+                <p>Category: jewelery</p>
+                <h2>Price: $ 168</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 3.9</p>
+                <p>Total Rating = 70</p>
+                <button onclick="addToCart(6,168)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">White Gold Plated Princess</h4>
+                <p>Category: jewelery</p>
+                <h2>Price: $ 9.99</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 3</p>
+                <p>Total Rating = 400</p>
+                <button onclick="addToCart(7,9.99)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Pierced Owl Rose Gold Plated Stainless Steel Double</h4>
+                <p>Category: jewelery</p>
+                <h2>Price: $ 10.99</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 1.9</p>
+                <p>Total Rating = 100</p>
+                <button onclick="addToCart(8,10.99)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">WD 2TB Elements Portable External Hard Drive - USB 3.0 </h4>
+                <p>Category: electronics</p>
+                <h2>Price: $ 64</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 3.3</p>
+                <p>Total Rating = 203</p>
+                <button onclick="addToCart(9,64)" id="addToCart-btn" class="buy-now btn btn-primary">add
+                  to cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s</h4>
+                <p>Category: electronics</p>
+                <h2>Price: $ 109</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 2.9</p>
+                <p>Total Rating = 470</p>
+                <button onclick="addToCart(10,109)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost
+                  SATA III 2.5</h4>
+                <p>Category: electronics</p>
+                <h2>Price: $ 109</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 4.8</p>
+                <p>Total Rating = 319</p>
+                <button onclick="addToCart(11,109)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">WD 4TB Gaming Drive Works with Playstation 4 Portable External
+                  Hard Drive</h4>
+                <p>Category: electronics</p>
+                <h2>Price: $ 114</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 4.8</p>
+                <p>Total Rating = 400</p>
+                <button onclick="addToCart(12,114)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin
+                </h4>
+                <p>Category: electronics</p>
+                <h2>Price: $ 599</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 2.9</p>
+                <p>Total Rating = 250</p>
+                <button onclick="addToCart(13,599)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor
+                  (LC49HG90DMNXZA) – Super Ultrawide Screen QLED </h4>
+                <p>Category: electronics</p>
+                <h2>Price: $ 999.99</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 2.2</p>
+                <p>Total Rating = 140</p>
+                <button onclick="addToCart(14,999.99)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats</h4>
+                <p>Category: women's clothing</p>
+                <h2>Price: $ 56.99</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 2.6</p>
+                <p>Total Rating = 235</p>
+                <button onclick="addToCart(15,56.99)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Lock and Love Women's Removable Hooded Faux Leather Moto Biker
+                  Jacket</h4>
+                <p>Category: women's clothing</p>
+                <h2>Price: $ 29.95</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 2.9</p>
+                <p>Total Rating = 340</p>
+                <button onclick="addToCart(16,29.95)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Rain Jacket Women Windbreaker Striped Climbing Raincoats</h4>
+                <p>Category: women's clothing</p>
+                <h2>Price: $ 39.99</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 3.8</p>
+                <p>Total Rating = 679</p>
+                <button onclick="addToCart(17,39.99)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">MBJ Women's Solid Short Sleeve Boat Neck V </h4>
+                <p>Category: women's clothing</p>
+                <h2>Price: $ 9.85</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 4.7</p>
+                <p>Total Rating = 130</p>
+                <button onclick="addToCart(18,9.85)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Opna Women's Short Sleeve Moisture</h4>
+                <p>Category: women's clothing</p>
+                <h2>Price: $ 7.95</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 4.5</p>
+                <p>Total Rating = 146</p>
+                <button onclick="addToCart(19,7.95)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="card">
+              <img class="card-img-top" src="https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
+                alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">DANVOUY Womens T Shirt Casual Cotton Short</h4>
+                <p>Category: women's clothing</p>
+                <h2>Price: $ 12.99</h2>
+                <div>
+                  <p>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </p>
+                </div>
+                <p>Average Rating = 3.6</p>
+                <p>Total Rating = 145</p>
+                <button onclick="addToCart(20,12.99)" id="addToCart-btn" class="buy-now btn btn-primary">add to
+                  cart</button>
+                <button id="details-btn" class="btn btn-danger">Details</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
+          <h1>My-Cart</h1>
           <table class="table">
             <thead>
-              <h1>My-Cart</h1>
               <tr>
                 <th scope="col"></th>
                 <th scope="col"></th>
@@ -49,39 +567,37 @@
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
-                <td>
-                  <span id="total-Products" class="right-card-font"> 0</span>
-                </td>
+                <td> <span id="total-Products" class="cart-number">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <th>Price:</th>
-                <td>$ <span id="price" class="right-card-font">0</span></td>
+                <td>$ <span id="price" class="cart-number">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <th>Delivery-Charge:</th>
-                <td>$ <span id="delivery-charge" class="right-card-font">20</span></td>
+                <td>$ <span id="delivery-charge" class="cart-number">20</span></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <th>Total-Tax:</th>
-                <td>$ <span id="total-tax" class="right-card-font">0</span></td>
+                <td>$ <span id="total-tax" class="cart-number">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
               <tr>
                 <th scope="row">Total</th>
-                <td colspan="2">$ <span id="total" class="right-card-font">0</span></td>
+                <td colspan="2">$ <span id="total" class="cart-number">0</span></td>
                 <td></td>
               </tr>
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn btn-info text-center">Buy Now</button>
           </div>
         </div>
       </div>
@@ -90,7 +606,17 @@
   <footer></footer>
 
   <!-- add javascript  file  -->
-  <script src="./js/app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
 </body>
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
 
 </html>
